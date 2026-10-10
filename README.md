@@ -1,4 +1,4 @@
-# xsukax Facebook Post PDF — Microsoft Edge extension v1.4
+# xsukax Facebook Post to PDF
 
 A Microsoft Edge Manifest V3 extension that turns a Facebook post into a Facebook-style PDF. **New in v1.4:** full manual corrections of the page name, publication date, optional time, and post text in the live preview, plus original author-avatar photo loading where Facebook exposes a suitable profile image.
 
@@ -54,16 +54,3 @@ The date extractor first checks structured timestamps, then timestamp spans, ARI
 - `report.html`, `report.css`, `report.js`: correction editor, live post preview and native PDF output
 - `pdf-export.js`: offline Canvas PDF writer with embedded author image and clickable original URL
 - `icons/`: extension icons
-- `tests/test_extension.py`: regression suite for four supplied page titles and dates
-- `tests/test_v14_features.py`: manual-editor and SVG/HTML/CSS avatar tests
-
-## Tests
-
-With a Chromium executable, Python Playwright, Pillow and PyMuPDF installed, run:
-
-```bash
-python tests/test_extension.py
-python tests/test_v14_features.py
-```
-
-The tests use synthetic local hydrated markup and simulated CDN images. The actual live Facebook website may change its DOM or access protections; the add-on has not been verified in your authenticated Edge session.
