@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Facebook Post PDF — Preview</title>
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <div id="toolbar" class="toolbar no-print">
+    <strong>xsukax Facebook Post PDF</strong>
+    <div class="toolbar-actions">
+      <button type="button" id="download">Download PDF</button>
+      <button type="button" id="print">Print / Save searchable PDF</button>
+    </div>
+  </div>
+  <div id="notice" class="notice no-print" role="status" aria-live="polite">Loading extracted post…</div>
+
+  <section id="editor" class="editor no-print" aria-labelledby="editor-heading" hidden>
+    <div class="editor-heading"><div><h2 id="editor-heading">Edit post before saving</h2>
+      <p>Correct any extracted detail. Changes appear immediately in the preview and in both PDF formats.</p></div>
+      <button type="button" id="reset" class="reset-button">Restore extracted values</button></div>
+    <div class="edit-grid">
+      <label class="field"><span>Facebook page name</span><input type="text" id="edit-name" maxlength="400" autocomplete="off" placeholder="Enter original page name"></label>
+      <label class="field"><span>Publication date</span><input type="date" id="edit-date"></label>
+      <label class="field"><span>Time (optional)</span><input type="text" id="edit-time" maxlength="80" placeholder="e.g. 9:08 PM"></label>
+      <label class="field wide"><span>Complete post content</span><textarea id="edit-text" spellcheck="false" rows="9" placeholder="Enter or correct the complete Facebook post, including line breaks" dir="auto"></textarea><small id="character-count"></small></label>
+      <label class="field wide"><span>Original page photo URL (optional)</span><input type="url" id="edit-avatar-url" inputmode="url" placeholder="https://scontent....fbcdn.net/..." autocomplete="off"><small id="avatar-status" role="status">Loading avatar…</small></label>
+    </div>
+  </section>
+
+  <main id="report" class="facebook-post" hidden>
+    <header class="post-header">
+      <div id="avatar" class="avatar" aria-hidden="true"><span id="avatar-letter">F</span><img id="avatar-image" alt="" hidden></div>
+      <div class="publisher">
+        <h1 id="page-name">—</h1>
+        <div class="post-date">
+          <time id="date">—</time>
+          <svg aria-label="Public post" role="img" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/></svg>
+        </div>
+      </div>
+      <div class="post-options" aria-hidden="true">···</div>
+    </header>
+    <section class="post-body" aria-label="Original post text">
+      <div id="post-text" class="post-text" dir="auto"></div>
+    </section>
+    <!-- Noninteractive Facebook-style controls, with no invented engagement counts. -->
+    <div class="post-actions" aria-hidden="true">
+      <span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10.5v10H4a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h3Zm0 0 5-8a2 2 0 0 1 3 2l-1 5h5.5a2 2 0 0 1 2 2.4l-1.5 7a2 2 0 0 1-2 1.6H7"/></svg> Like</span>
+      <span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a8.5 8.5 0 0 1-8.5 8.5H4l1.7-4A8.5 8.5 0 1 1 20 11.5Z"/></svg> Comment</span>
+      <span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m14 4 7 7-7 7v-4c-6.5 0-9.7 1.6-12 5 0-7 4.5-11 12-11V4Z"/></svg> Share</span>
+    </div>
+    <footer class="post-url">
+      <span class="url-label">Original Facebook post URL</span>
+      <a id="source" href="#" rel="noopener noreferrer" target="_blank"></a>
+    </footer>
+  </main>
+  <script src="pdf-export.js"></script>
+  <script src="report.js"></script>
+</body>
+</html>
