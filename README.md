@@ -1,6 +1,6 @@
 # xsukax Facebook Post to PDF
 
-A Microsoft Edge Manifest V3 extension that turns a Facebook post into a Facebook-style PDF. **New in v1.4:** full manual corrections of the page name, publication date, optional time, and post text in the live preview, plus original author-avatar photo loading where Facebook exposes a suitable profile image.
+A Microsoft Edge / Chromium Manifest V3 extension that turns a Facebook post into a Facebook-style PDF. **New in v1.4:** full manual corrections of the page name, publication date, optional time, and post text in the live preview, plus original author-avatar photo loading where Facebook exposes a suitable profile image.
 
 ## Install or upgrade
 
