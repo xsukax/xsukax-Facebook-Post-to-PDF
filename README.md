@@ -4,9 +4,9 @@ A Microsoft Edge Manifest V3 extension that turns a Facebook post into a Faceboo
 
 ## Install or upgrade
 
-1. Unzip `xsukax-facebook-post-pdf-edge-v1.4.zip` into a permanent folder.
+1. Unzip `xsukax-Facebook-Post-to-PDF-main.zip` into a permanent folder.
 2. Open `edge://extensions` and enable **Developer mode**.
-3. Choose **Load unpacked** and select the extracted `xsukax-facebook-post-pdf` folder (which contains `manifest.json`).
+3. Choose **Load unpacked** and select the extracted `xsukax-Facebook-Post-to-PDF-main` folder (which contains `manifest.json`).
 4. If upgrading an unpacked extension, replace the files in its existing installation folder and press **Reload** in `edge://extensions`. If you loaded it from a different folder, remove the old extension and load the new folder instead.
 
 ## Save and manually correct a post
